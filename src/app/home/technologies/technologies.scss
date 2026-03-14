@@ -47,6 +47,7 @@
     padding: 1.5rem 1rem;
     text-align: center;
     cursor: default;
+    animation: fadeInUp 0.5s ease both;
 
     &:hover .tech__item-icon {
       background: var(--tech-color, var(--color-primary));

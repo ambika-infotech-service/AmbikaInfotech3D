@@ -1,6 +1,6 @@
 # Ambika Infotech
 
-> Boutique software studio in Ahmedabad, India, specialising in Angular web development and cross-platform native mobile apps using Capacitor. Founded 2018. 50+ projects · 30+ clients · 7+ years experience.
+> Boutique software studio in Ahmedabad, India, specialising in Angular web development and cross-platform native mobile apps using Capacitor. Founded October 2025.
 
 Ambika Infotech builds high-performance web and mobile applications for clients across India and globally. The studio is known for clean, maintainable Angular codebases, accessible UI design, and delivering production-ready Capacitor apps for both iOS and Android from a single TypeScript codebase.
 
@@ -17,7 +17,7 @@ Ambika Infotech builds high-performance web and mobile applications for clients 
 
 ## About
 
-- [About Ambika Infotech](https://www.3d.ambikainfotech.online/#about): Founded in 2018, headquartered in Ahmedabad, Gujarat, India. Multilingual team (English, Hindi, Gujarati).
+- [About Ambika Infotech](https://www.3d.ambikainfotech.online/#about): Founded in October 2025, headquartered in Ahmedabad, Gujarat, India. Multilingual team (English, Hindi, Gujarati).
 
 ## Portfolio
 

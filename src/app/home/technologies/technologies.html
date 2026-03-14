@@ -14,9 +14,9 @@
       @for (cat of categories; track cat) {
         <button
           class="tech__filter-btn"
-          [class.active]="activeCategory === cat"
+          [class.active]="activeCategory() === cat"
           (click)="setCategory(cat)"
-          [attr.aria-pressed]="activeCategory === cat"
+          [attr.aria-pressed]="activeCategory() === cat"
         >
           {{ cat }}
         </button>
@@ -25,8 +25,10 @@
 
     <!-- Tech grid -->
     <div class="tech__grid" role="list">
-      @for (tech of filtered; track tech.name) {
-        <div class="tech__item glass-card reveal" role="listitem" [attr.aria-label]="tech.name + ' - ' + tech.category">
+      @for (tech of filtered(); track tech.name; let i = $index) {
+        <div class="tech__item glass-card" role="listitem"
+          [attr.aria-label]="tech.name + ' - ' + tech.category"
+          [style.animation-delay]="(i * 0.05) + 's'">
           <div class="tech__item-icon" [style.--tech-color]="tech.color" aria-hidden="true">
             <i [class]="'bi ' + tech.icon"></i>
           </div>

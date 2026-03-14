@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
 
 interface Tech {
   name: string;
@@ -33,15 +33,15 @@ const CATEGORIES = ['All', ...Array.from(new Set(TECHNOLOGIES.map((t) => t.categ
 export class Technologies {
   readonly all = TECHNOLOGIES;
   readonly categories = CATEGORIES;
-  activeCategory = 'All';
+  readonly activeCategory = signal('All');
 
-  get filtered(): Tech[] {
-    return this.activeCategory === 'All'
+  readonly filtered = computed(() =>
+    this.activeCategory() === 'All'
       ? this.all
-      : this.all.filter((t) => t.category === this.activeCategory);
-  }
+      : this.all.filter((t) => t.category === this.activeCategory())
+  );
 
   setCategory(cat: string): void {
-    this.activeCategory = cat;
+    this.activeCategory.set(cat);
   }
 }

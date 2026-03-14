@@ -17,7 +17,7 @@ export class App implements OnInit {
     this.seo.setPage({
       title: 'Ambika Infotech | Angular Web & Native Mobile App Developers',
       description:
-        'Ambika Infotech is a boutique software studio in Ahmedabad, India, specialising in Angular web development and cross-platform native mobile apps with Capacitor. 7+ years, 50+ projects delivered.',
+        'Ambika Infotech is a boutique software studio in Ahmedabad, India, specialising in Angular web development and cross-platform native mobile apps with Capacitor. Founded October 2025.',
       url: 'https://www.3d.ambikainfotech.online/',
       image: 'https://www.3d.ambikainfotech.online/og-image.png',
     });
