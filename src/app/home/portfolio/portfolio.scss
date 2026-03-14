@@ -11,13 +11,22 @@
     flex-direction: column;
     overflow: hidden;
     padding: 0;
+    transform: perspective(900px) rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1),
+                box-shadow 0.45s ease;
+
+    &:hover {
+      transform: perspective(900px) rotateX(-5deg) rotateY(4deg) translateY(-8px) scale(1.02);
+      box-shadow: 12px 24px 50px rgba(0, 0, 0, 0.55);
+    }
 
     &:hover .port__card-header {
-      filter: brightness(1.1);
+      filter: brightness(1.15);
     }
 
     &:hover .port__card-hero-icon {
-      transform: scale(1.15) rotate(-5deg);
+      transform: translate(-50%, -50%) scale(1.2) rotate(-8deg) translateZ(30px);
     }
   }
 
@@ -38,7 +47,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform $transition-smooth;
+    transform-style: preserve-3d;
+    transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   &__card-cat {

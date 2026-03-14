@@ -18,10 +18,41 @@
     flex-direction: column;
     gap: 1rem;
     border-top: 3px solid var(--accent, var(--color-primary));
+    transform-style: preserve-3d;
+    transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, border-color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+
+    // Shine sweep overlay
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.06) 50%,
+        transparent 60%
+      );
+      transform: translateX(-100%) skewX(-15deg);
+      pointer-events: none;
+    }
+
+    &:hover {
+      transform: perspective(800px) rotateX(-4deg) rotateY(4deg) translateY(-6px);
+      box-shadow: 8px 16px 40px rgba(0, 0, 0, 0.5),
+                  -4px -4px 20px rgba(var(--accent, #{$color-primary}), 0.1);
+
+      &::after {
+        animation: shine-sweep 0.6s ease forwards;
+      }
+    }
 
     &:hover .svc__card-icon {
       background: var(--accent, var(--color-primary));
       box-shadow: 0 0 20px var(--accent, var(--color-primary));
+      transform: translateZ(20px) scale(1.1);
 
       i { color: $color-white; }
     }
@@ -29,6 +60,7 @@
 
   &__card-icon {
     @include icon-box($icon-box-md, $radius-lg, $glass-white-05);
+    transition: transform 0.4s ease, background $transition-smooth, box-shadow $transition-smooth;
 
     i {
       font-size: 1.5rem;

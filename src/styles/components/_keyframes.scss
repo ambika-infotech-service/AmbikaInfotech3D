@@ -42,3 +42,43 @@
 @keyframes spin-slow {
   to { transform: rotate(360deg); }
 }
+
+// ── 3D / perspective keyframes ────────────────────────────────────────────────
+
+// Orbital dot travelling around a 3D tilted ring
+@keyframes orbit-3d {
+  0%   { transform: rotateX(70deg) rotateZ(0deg)   translateX(180px) rotateZ(0deg)   rotateX(-70deg); }
+  100% { transform: rotateX(70deg) rotateZ(360deg) translateX(180px) rotateZ(-360deg) rotateX(-70deg); }
+}
+
+@keyframes orbit-3d-reverse {
+  0%   { transform: rotateX(70deg) rotateZ(0deg)    translateX(130px) rotateZ(0deg)    rotateX(-70deg); }
+  100% { transform: rotateX(70deg) rotateZ(-360deg) translateX(130px) rotateZ(360deg) rotateX(-70deg); }
+}
+
+// Gentle rotate on all 3 axes — used for 3D avatar orb
+@keyframes rotate3d {
+  0%   { transform: rotateX(0deg)  rotateY(0deg)   rotateZ(0deg); }
+  33%  { transform: rotateX(6deg)  rotateY(12deg)  rotateZ(3deg); }
+  66%  { transform: rotateX(-6deg) rotateY(-8deg)  rotateZ(-3deg); }
+  100% { transform: rotateX(0deg)  rotateY(0deg)   rotateZ(0deg); }
+}
+
+// Shimmer sweep for card shine effect
+@keyframes shine-sweep {
+  0%   { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(250%)  skewX(-15deg); }
+}
+
+// Tilt breathe — slow depth-breathing for the hero visual
+@keyframes tilt-breathe {
+  0%, 100% { transform: perspective(800px) rotateX(4deg) rotateY(-4deg); }
+  33%       { transform: perspective(800px) rotateX(-3deg) rotateY(6deg); }
+  66%       { transform: perspective(800px) rotateX(5deg) rotateY(2deg); }
+}
+
+// Icon flip for tech tiles
+@keyframes icon-flip {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}

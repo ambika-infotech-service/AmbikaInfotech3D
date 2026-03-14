@@ -148,7 +148,8 @@
     width: 420px;
     height: 420px;
     @include flex-center;
-    animation: float 5s ease-in-out infinite;
+    animation: tilt-breathe 10s ease-in-out infinite;
+    transform-style: preserve-3d;
   }
 
   &__ring {
@@ -166,6 +167,41 @@
       width: 280px; height: 280px;
       animation: spin-slow 14s linear infinite reverse;
       border-top-color: var(--color-accent);
+    }
+  }
+
+  // 3D tilted orbital tracks + glow dots
+  &__orbit {
+    position: absolute;
+    border-radius: $radius-full;
+    border: 1px dashed rgba($color-primary, 0.2);
+    transform-style: preserve-3d;
+
+    &--outer {
+      width: 360px; height: 360px;
+      transform: rotateX(70deg);
+      animation: spin-slow 18s linear infinite;
+    }
+
+    &--inner {
+      width: 260px; height: 260px;
+      transform: rotateX(70deg);
+      animation: spin-slow 12s linear infinite reverse;
+    }
+  }
+
+  &__orbit-dot {
+    position: absolute;
+    top: -5px; left: 50%;
+    width: 10px; height: 10px;
+    margin-left: -5px;
+    border-radius: $radius-full;
+    background: var(--color-primary);
+    box-shadow: 0 0 10px 3px rgba($color-primary, 0.7);
+
+    &--accent {
+      background: var(--color-accent);
+      box-shadow: 0 0 10px 3px rgba($color-accent, 0.7);
     }
   }
 
