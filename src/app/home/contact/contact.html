@@ -36,15 +36,12 @@
 
           <!-- Social -->
           <div class="ctc__social" role="list" aria-label="Social media links">
-            <a href="#" class="ctc__social-link" role="listitem" aria-label="GitHub">
-              <i class="bi bi-github" aria-hidden="true"></i>
-            </a>
-            <a href="#" class="ctc__social-link" role="listitem" aria-label="LinkedIn">
-              <i class="bi bi-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="#" class="ctc__social-link" role="listitem" aria-label="Twitter">
-              <i class="bi bi-twitter-x" aria-hidden="true"></i>
-            </a>
+            @for (s of socialLinks; track s.href) {
+              <a [href]="s.href" class="ctc__social-link" role="listitem" [attr.aria-label]="s.label"
+                 target="_blank" rel="noopener noreferrer">
+                <i class="bi {{ s.icon }}" aria-hidden="true"></i>
+              </a>
+            }
           </div>
         </div>
       </div>

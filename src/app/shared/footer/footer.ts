@@ -9,6 +9,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 export class Footer {
   readonly year = new Date().getFullYear();
 
+  readonly socialLinks = [
+    { label: 'GitHub',    icon: 'bi-github',    href: 'https://github.com/' },
+    { label: 'LinkedIn',  icon: 'bi-linkedin',  href: 'https://linkedin.com/' },
+    { label: 'Twitter',   icon: 'bi-twitter-x', href: 'https://x.com/' },
+    { label: 'Instagram', icon: 'bi-instagram', href: 'https://instagram.com/' },
+  ];
+
   readonly quickLinks = [
     { label: 'Home',         href: '#home' },
     { label: 'Services',     href: '#services' },

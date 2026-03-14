@@ -13,6 +13,12 @@ interface ContactInfo {
   href: string;
 }
 
+const SOCIAL_LINKS = [
+  { label: 'GitHub',   icon: 'bi-github',    href: 'https://github.com/' },
+  { label: 'LinkedIn', icon: 'bi-linkedin',  href: 'https://linkedin.com/' },
+  { label: 'Twitter',  icon: 'bi-twitter-x', href: 'https://x.com/' },
+];
+
 const CONTACT_INFO: ContactInfo[] = [
   {
     icon: 'bi-envelope-fill',
@@ -51,6 +57,7 @@ export class Contact {
   private fb = inject(FormBuilder);
 
   readonly contactInfo = CONTACT_INFO;
+  readonly socialLinks = SOCIAL_LINKS;
   readonly submitted = signal(false);
   readonly sending = signal(false);
 
