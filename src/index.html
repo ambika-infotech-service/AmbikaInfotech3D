@@ -10,7 +10,6 @@
   <meta name="description" content="Ambika Infotech is a boutique software studio in Ahmedabad, India, specialising in Angular web development and cross-platform native mobile apps with Capacitor. 7+ years, 50+ projects delivered.">
   <meta name="keywords" content="Angular development, Capacitor mobile apps, web development Ahmedabad, Angular developers India, cross-platform apps, PWA development, UI/UX design, TypeScript developers">
   <meta name="author" content="Ambika Infotech">
-  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.3d.ambikainfotech.online/">
 
   <!-- Open Graph / Facebook -->
@@ -48,17 +47,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- JSON-LD structured data -->
+  <!-- GEO: allow AI crawlers to index this page -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+  <!-- JSON-LD: Organisation / ProfessionalService -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Ambika Infotech",
-    "url": "https://www.ambikainfotech.online",
+    "url": "https://www.3d.ambikainfotech.online",
     "logo": "https://www.3d.ambikainfotech.online/favicon.ico",
     "image": "https://www.3d.ambikainfotech.online/og-image.png",
-    "description": "Boutique software studio specialising in Angular web development and Capacitor mobile apps.",
+    "description": "Boutique software studio specialising in Angular web development and Capacitor mobile apps. Based in Ahmedabad, India. Founded 2018. 50+ projects delivered.",
     "foundingDate": "2018",
+    "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 10 },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Ahmedabad",
@@ -77,7 +80,91 @@
       "https://x.com/ambikainfotech",
       "https://instagram.com/ambikainfotech"
     ],
-    "knowsAbout": ["Angular", "Capacitor", "TypeScript", "Progressive Web Apps", "Mobile App Development"]
+    "knowsAbout": ["Angular", "Capacitor", "TypeScript", "Progressive Web Apps", "Mobile App Development"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Software Development Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Angular Web Development", "description": "Custom, performant Angular applications using standalone components, signals, and the latest framework features." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Capacitor Mobile Apps", "description": "Cross-platform iOS and Android apps built on top of Angular using Capacitor, with access to native device APIs." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Progressive Web Apps", "description": "PWAs that install like native apps, work offline, and deliver fast, reliable experiences on any device." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design & Prototyping", "description": "Accessible, modern interface design using Bootstrap 5 and custom design systems built for performance." } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: WebSite (enables Sitelinks Search Box in Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ambika Infotech",
+    "url": "https://www.3d.ambikainfotech.online",
+    "description": "Angular web development and Capacitor mobile app studio based in Ahmedabad, India.",
+    "inLanguage": "en-IN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ambika Infotech"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage — AEO (Answer Engine Optimisation) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services does Ambika Infotech offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ambika Infotech offers Angular web application development, Capacitor cross-platform mobile app development (iOS & Android), Progressive Web App (PWA) development, and UI/UX design and prototyping."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What technologies does Ambika Infotech specialise in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ambika Infotech specialises in Angular (latest version), TypeScript, Capacitor, Node.js, Bootstrap 5, SCSS, RxJS, NgRx, Firebase, and REST/GraphQL API integration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Ambika Infotech located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ambika Infotech is based in Ahmedabad, Gujarat, India. We work with clients globally and can collaborate remotely across time zones."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many projects has Ambika Infotech delivered?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ambika Infotech has delivered more than 50 projects for over 30 happy clients across 7+ years since being founded in 2018."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Ambika Infotech build mobile apps for both iOS and Android?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Ambika Infotech builds cross-platform native mobile apps using Capacitor on top of Angular, producing a single codebase that deploys to both iOS (App Store) and Android (Google Play) with full access to native device APIs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact Ambika Infotech?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can reach Ambika Infotech by email at hello@ambikainfotech.online, or through the contact form on the website. You can also connect on LinkedIn at linkedin.com/company/ambika-infotech or on GitHub at github.com/ambikainfotech."
+        }
+      }
+    ]
   }
   </script>
 </head>

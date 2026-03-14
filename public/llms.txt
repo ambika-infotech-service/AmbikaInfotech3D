@@ -1,0 +1,28 @@
+# Ambika Infotech
+
+> Boutique software studio in Ahmedabad, India, specialising in Angular web development and cross-platform native mobile apps using Capacitor. Founded 2018. 50+ projects · 30+ clients · 7+ years experience.
+
+Ambika Infotech builds high-performance web and mobile applications for clients across India and globally. The studio is known for clean, maintainable Angular codebases, accessible UI design, and delivering production-ready Capacitor apps for both iOS and Android from a single TypeScript codebase.
+
+## Services
+
+- [Angular Web Development](https://www.3d.ambikainfotech.online/#services): Custom Angular applications using standalone components, signals, lazy-loading, and modern best practices.
+- [Capacitor Mobile Apps](https://www.3d.ambikainfotech.online/#services): Cross-platform iOS & Android apps built on Angular + Capacitor with native device API access.
+- [Progressive Web Apps](https://www.3d.ambikainfotech.online/#services): PWAs that install on any device, work offline, and deliver native-like performance.
+- [UI/UX Design & Prototyping](https://www.3d.ambikainfotech.online/#services): Accessible, Bootstrap-based interface design and interactive prototyping.
+
+## Technologies
+
+- [Technologies We Use](https://www.3d.ambikainfotech.online/#technologies): Angular, TypeScript, Capacitor, Node.js, Bootstrap 5, SCSS, RxJS, NgRx, Firebase, REST & GraphQL APIs.
+
+## About
+
+- [About Ambika Infotech](https://www.3d.ambikainfotech.online/#about): Founded in 2018, headquartered in Ahmedabad, Gujarat, India. Multilingual team (English, Hindi, Gujarati).
+
+## Portfolio
+
+- [Projects](https://www.3d.ambikainfotech.online/#portfolio): Selected work across web apps, mobile apps, and PWAs for diverse industries.
+
+## Contact
+
+- [Get in Touch](https://www.3d.ambikainfotech.online/#contact): Email hello@ambikainfotech.online · LinkedIn linkedin.com/company/ambika-infotech · GitHub github.com/ambikainfotech
