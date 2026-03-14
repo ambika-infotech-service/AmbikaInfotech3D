@@ -1,17 +1,17 @@
 # Ambika Infotech — Full Content
 
-> Boutique software studio in Ahmedabad, India, specialising in Angular web development and cross-platform native mobile apps using Capacitor. Founded 2018. 50+ projects · 30+ clients · 7+ years experience.
+> Boutique software studio in Ahmedabad, India, specialising in Angular web development and cross-platform native mobile apps using Capacitor. Founded October 2025.
 
 ---
 
 ## About
 
-Ambika Infotech is a boutique software development studio founded in 2018 and headquartered in Ahmedabad, Gujarat, India. We are a small, senior team of developers and designers who build high-quality Angular web applications and cross-platform native mobile apps using Capacitor.
+Ambika Infotech is a boutique software development studio founded in October 2025 and headquartered in Ahmedabad, Gujarat, India. We are a small, senior team of developers and designers who build high-quality Angular web applications and cross-platform native mobile apps using Capacitor.
 
 We work with startups, SMEs, and enterprises across India and globally, helping them design, build, and ship digital products that are fast, accessible, and maintainable.
 
 **Key facts:**
-- Founded: 2018
+- Founded: October 2025
 - Location: Ahmedabad, Gujarat, India
 - Team languages: English, Hindi, Gujarati
 - Projects delivered: 50+
@@ -87,7 +87,7 @@ A: Angular (latest version), TypeScript, Capacitor, Node.js, Bootstrap 5, SCSS, 
 A: Ahmedabad, Gujarat, India. We work with clients globally and collaborate remotely across time zones.
 
 **Q: How many projects has Ambika Infotech delivered?**
-A: More than 50 projects for over 30 happy clients across 7+ years since founding in 2018.
+A: Ambika Infotech was founded in October 2025 and has been growing rapidly since launch, delivering quality Angular and Capacitor projects.
 
 **Q: Can Ambika Infotech build mobile apps for both iOS and Android?**
 A: Yes. We use Capacitor on top of Angular to produce a single codebase that deploys to both iOS (App Store) and Android (Google Play) with full native device API access.
