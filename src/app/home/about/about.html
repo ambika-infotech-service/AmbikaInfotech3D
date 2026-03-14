@@ -1,0 +1,66 @@
+<section id="about" class="section abt" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Visual side -->
+      <div class="col-lg-5 order-lg-2">
+        <div class="abt__visual reveal reveal-right">
+          <div class="abt__avatar-wrap">
+            <div class="abt__avatar" aria-hidden="true">
+              <i class="bi bi-building-gear"></i>
+            </div>
+            <div class="abt__avatar-ring" aria-hidden="true"></div>
+          </div>
+
+          <!-- Numbers floating cards -->
+          <div class="abt__float abt__float--1 glass-card reveal delay-3">
+            <span class="abt__float-num gradient-text">2018</span>
+            <span class="abt__float-label">Founded</span>
+          </div>
+          <div class="abt__float abt__float--2 glass-card reveal delay-4">
+            <span class="abt__float-num gradient-text">100%</span>
+            <span class="abt__float-label">Remote-ready</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="col-lg-7 order-lg-1">
+        <div class="gradient-divider reveal text-start" style="margin-left:0;"></div>
+        <h2 id="about-heading" class="section__title reveal delay-1">
+          About <span class="gradient-text">Ambika Infotech</span>
+        </h2>
+        <p class="abt__lead reveal delay-2">
+          We are a boutique software studio founded in 2018, passionate about Angular and
+          the modern web ecosystem. Our core expertise sits at the intersection of
+          <strong>beautiful UI, robust architecture, and native mobile performance</strong>.
+        </p>
+        <p class="abt__para reveal delay-2">
+          From startups launching their first MVP to enterprises modernising legacy stacks,
+          we've delivered 50+ production applications. Every project is an opportunity to
+          craft something precise, accessible, and fast.
+        </p>
+
+        <!-- Values grid -->
+        <div class="abt__values" role="list">
+          @for (v of values; track v.title; let i = $index) {
+            <div class="abt__value reveal" [class]="'delay-' + (i + 3)" role="listitem">
+              <div class="abt__value-icon" aria-hidden="true">
+                <i [class]="'bi ' + v.icon"></i>
+              </div>
+              <div>
+                <h3 class="abt__value-title">{{ v.title }}</h3>
+                <p class="abt__value-text">{{ v.text }}</p>
+              </div>
+            </div>
+          }
+        </div>
+
+        <a href="#contact" class="btn btn-gradient mt-4 reveal delay-5">
+          <i class="bi bi-envelope" aria-hidden="true"></i> Start a Conversation
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>

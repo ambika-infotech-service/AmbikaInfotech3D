@@ -1,0 +1,63 @@
+<nav class="ai-navbar" role="navigation" aria-label="Main navigation">
+  <div class="container ai-navbar__inner">
+    <!-- Brand -->
+    <a href="#home" class="ai-navbar__brand" (click)="closeMenu()" aria-label="Ambika Infotech home">
+      <span class="ai-navbar__logo-icon" aria-hidden="true">
+        <i class="bi bi-hexagon-fill"></i>
+        <i class="bi bi-code-slash"></i>
+      </span>
+      <span class="ai-navbar__logo-text">
+        Ambika<span class="gradient-text">Infotech</span>
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="ai-navbar__links" role="list">
+      @for (link of navLinks; track link.href) {
+        <li>
+          <a [href]="link.href" class="ai-navbar__link">{{ link.label }}</a>
+        </li>
+      }
+    </ul>
+
+    <!-- CTA -->
+    <a href="#contact" class="btn btn-gradient d-none d-lg-inline-flex align-items-center gap-2">
+      <i class="bi bi-chat-dots" aria-hidden="true"></i> Let's Talk
+    </a>
+
+    <!-- Hamburger -->
+    <button
+      class="ai-navbar__hamburger d-lg-none"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="mobile-menu"
+      aria-label="Toggle navigation menu"
+    >
+      <span [class]="menuOpen() ? 'bi bi-x-lg' : 'bi bi-list'" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="ai-navbar__mobile"
+    [class.ai-navbar__mobile--open]="menuOpen()"
+    role="dialog"
+    [attr.aria-hidden]="!menuOpen()"
+  >
+    <ul role="list">
+      @for (link of navLinks; track link.href) {
+        <li>
+          <a [href]="link.href" class="ai-navbar__mobile-link" (click)="closeMenu()">
+            {{ link.label }}
+          </a>
+        </li>
+      }
+      <li>
+        <a href="#contact" class="btn btn-gradient w-100 mt-2" (click)="closeMenu()">
+          <i class="bi bi-chat-dots" aria-hidden="true"></i> Let's Talk
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,75 @@
+<footer class="ftc" role="contentinfo">
+  <div class="ftc__top">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Brand col -->
+        <div class="col-lg-4">
+          <a href="#home" class="ftc__brand" aria-label="Ambika Infotech home">
+            <span class="ftc__logo-icon" aria-hidden="true">
+              <i class="bi bi-hexagon-fill"></i>
+              <i class="bi bi-code-slash"></i>
+            </span>
+            Ambika<span class="gradient-text">Infotech</span>
+          </a>
+          <p class="ftc__tagline">
+            Building exceptional Angular applications and native mobile experiences — one precise line of code at a time.
+          </p>
+          <div class="ftc__social" role="list" aria-label="Social media links">
+            <a href="#" class="ftc__social-link" role="listitem" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+            <a href="#" class="ftc__social-link" role="listitem" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+            <a href="#" class="ftc__social-link" role="listitem" aria-label="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+            <a href="#" class="ftc__social-link" role="listitem" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="col-sm-6 col-lg-2">
+          <h3 class="ftc__col-title">Quick Links</h3>
+          <ul class="ftc__link-list" role="list">
+            @for (link of quickLinks; track link.href) {
+              <li><a [href]="link.href" class="ftc__link">{{ link.label }}</a></li>
+            }
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-sm-6 col-lg-3">
+          <h3 class="ftc__col-title">Services</h3>
+          <ul class="ftc__link-list" role="list">
+            @for (svc of services; track svc) {
+              <li><a href="#services" class="ftc__link">{{ svc }}</a></li>
+            }
+          </ul>
+        </div>
+
+        <!-- Newsletter CTA -->
+        <div class="col-lg-3">
+          <h3 class="ftc__col-title">Let's Work Together</h3>
+          <p class="ftc__newsletter-text">
+            Ready to start your next digital product? Drop us a line.
+          </p>
+          <a href="#contact" class="btn btn-gradient w-100">
+            <i class="bi bi-send" aria-hidden="true"></i> Get a Free Quote
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="ftc__bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <p class="mb-0 ftc__copy">
+          &copy; {{ year }} Ambika Infotech. All rights reserved.
+        </p>
+        <p class="mb-0 ftc__made-with">
+          Made with <i class="bi bi-heart-fill text-danger" aria-label="love"></i>
+          in Ahmedabad, India &mdash;
+          Powered by <span class="gradient-text fw-semibold">Angular 21</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

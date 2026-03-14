@@ -1,0 +1,39 @@
+<section id="services" class="section svc" aria-labelledby="services-heading">
+  <div class="svc__bg" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="gradient-divider reveal"></div>
+      <h2 id="services-heading" class="section__title gradient-text reveal delay-1">What We Do</h2>
+      <p class="section__subtitle reveal delay-2">
+        Full-cycle digital product development — from design to deployment and beyond.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      @for (svc of services; track svc.title; let i = $index) {
+        <div class="col-md-6 col-xl-4">
+          <article
+            class="glass-card svc__card reveal"
+            [class]="'delay-' + ((i % 3) + 1)"
+            [style.--accent]="svc.accentColor"
+            [attr.aria-label]="svc.title"
+          >
+            <div class="svc__card-icon">
+              <i [class]="'bi ' + svc.icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="svc__card-title">{{ svc.title }}</h3>
+            <p class="svc__card-desc">{{ svc.description }}</p>
+            <ul class="svc__card-features" role="list">
+              @for (f of svc.features; track f) {
+                <li>
+                  <i class="bi bi-check2-circle" aria-hidden="true"></i> {{ f }}
+                </li>
+              }
+            </ul>
+          </article>
+        </div>
+      }
+    </div>
+  </div>
+</section>

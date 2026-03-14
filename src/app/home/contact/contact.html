@@ -1,0 +1,171 @@
+<section id="contact" class="section ctc" aria-labelledby="contact-heading">
+  <div class="ctc__bg" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="gradient-divider reveal"></div>
+      <h2 id="contact-heading" class="section__title gradient-text reveal delay-1">Get In Touch</h2>
+      <p class="section__subtitle reveal delay-2">
+        Have a project in mind? We'd love to hear about it. Let's build something great together.
+      </p>
+    </div>
+
+    <div class="row g-5 align-items-start">
+
+      <!-- Info panel -->
+      <div class="col-lg-4">
+        <div class="ctc__info-panel glass-card reveal">
+          <h3 class="ctc__panel-title">Contact Information</h3>
+          <p class="ctc__panel-sub">Reach out and we'll get back to you within 24 hours.</p>
+
+          <ul class="ctc__info-list" role="list">
+            @for (info of contactInfo; track info.label) {
+              <li class="ctc__info-item">
+                <div class="ctc__info-icon" aria-hidden="true">
+                  <i [class]="'bi ' + info.icon"></i>
+                </div>
+                <div>
+                  <span class="ctc__info-label">{{ info.label }}</span>
+                  <a [href]="info.href" class="ctc__info-value" [attr.aria-label]="info.label + ': ' + info.value">
+                    {{ info.value }}
+                  </a>
+                </div>
+              </li>
+            }
+          </ul>
+
+          <!-- Social -->
+          <div class="ctc__social" role="list" aria-label="Social media links">
+            <a href="#" class="ctc__social-link" role="listitem" aria-label="GitHub">
+              <i class="bi bi-github" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="ctc__social-link" role="listitem" aria-label="LinkedIn">
+              <i class="bi bi-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="ctc__social-link" role="listitem" aria-label="Twitter">
+              <i class="bi bi-twitter-x" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="col-lg-8">
+        @if (submitted()) {
+          <div class="ctc__success glass-card reveal" role="status" aria-live="polite">
+            <i class="bi bi-check-circle-fill ctc__success-icon" aria-hidden="true"></i>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. We'll get back to you shortly.</p>
+            <button class="btn btn-gradient" (click)="submitted.set(false)">Send Another</button>
+          </div>
+        } @else {
+          <form
+            [formGroup]="form"
+            (ngSubmit)="onSubmit()"
+            class="ctc__form glass-card reveal delay-1"
+            novalidate
+            aria-label="Contact form"
+          >
+            <div class="row g-3">
+
+              <div class="col-sm-6">
+                <label for="contact-name" class="form-label">Full Name <span aria-hidden="true">*</span></label>
+                <input
+                  id="contact-name"
+                  type="text"
+                  class="form-control ctc__input"
+                  [class.is-invalid]="isInvalid('name')"
+                  formControlName="name"
+                  placeholder="John Smith"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                />
+                @if (isInvalid('name')) {
+                  <div class="invalid-feedback" role="alert">Please enter your name (min 2 characters).</div>
+                }
+              </div>
+
+              <div class="col-sm-6">
+                <label for="contact-email" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+                <input
+                  id="contact-email"
+                  type="email"
+                  class="form-control ctc__input"
+                  [class.is-invalid]="isInvalid('email')"
+                  formControlName="email"
+                  placeholder="john@example.com"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                />
+                @if (isInvalid('email')) {
+                  <div class="invalid-feedback" role="alert">Please enter a valid email address.</div>
+                }
+              </div>
+
+              <div class="col-12">
+                <label for="contact-subject" class="form-label">Subject <span aria-hidden="true">*</span></label>
+                <select
+                  id="contact-subject"
+                  class="form-select ctc__input"
+                  [class.is-invalid]="isInvalid('subject')"
+                  formControlName="subject"
+                  required
+                  aria-required="true"
+                >
+                  <option value="" disabled selected>Select a topic…</option>
+                  <option value="web-development">Angular Web Development</option>
+                  <option value="mobile-app">Native Mobile App</option>
+                  <option value="pwa">Progressive Web App</option>
+                  <option value="ui-ux">UI/UX Design</option>
+                  <option value="maintenance">Maintenance & Support</option>
+                  <option value="other">Other</option>
+                </select>
+                @if (isInvalid('subject')) {
+                  <div class="invalid-feedback" role="alert">Please select a subject.</div>
+                }
+              </div>
+
+              <div class="col-12">
+                <label for="contact-message" class="form-label">Message <span aria-hidden="true">*</span></label>
+                <textarea
+                  id="contact-message"
+                  class="form-control ctc__input"
+                  [class.is-invalid]="isInvalid('message')"
+                  formControlName="message"
+                  rows="5"
+                  placeholder="Tell us about your project…"
+                  required
+                  aria-required="true"
+                ></textarea>
+                @if (isInvalid('message')) {
+                  <div class="invalid-feedback" role="alert">Message must be at least 20 characters.</div>
+                }
+              </div>
+
+              <div class="col-12">
+                <button
+                  type="submit"
+                  class="btn btn-gradient btn-lg w-100"
+                  [disabled]="sending()"
+                  [attr.aria-busy]="sending()"
+                >
+                  @if (sending()) {
+                    <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                    Sending…
+                  } @else {
+                    <i class="bi bi-send me-2" aria-hidden="true"></i>
+                    Send Message
+                  }
+                </button>
+              </div>
+
+            </div>
+          </form>
+        }
+      </div>
+
+    </div>
+  </div>
+</section>

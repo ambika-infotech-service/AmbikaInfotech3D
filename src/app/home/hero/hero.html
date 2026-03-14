@@ -1,0 +1,100 @@
+<section id="home" class="hero" aria-labelledby="hero-heading">
+  <!-- Animated blobs -->
+  <div class="bg-blob hero__blob--1" aria-hidden="true"></div>
+  <div class="bg-blob hero__blob--2" aria-hidden="true"></div>
+  <div class="bg-blob hero__blob--3" aria-hidden="true"></div>
+
+  <!-- Grid overlay -->
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="container hero__content">
+    <div class="row align-items-center min-vh-100 py-5">
+
+      <!-- Left content -->
+      <div class="col-lg-6">
+        <div class="hero__badge reveal">
+          <i class="bi bi-stars" aria-hidden="true"></i>
+          Trusted IT Partner Since 2018
+        </div>
+
+        <h1 id="hero-heading" class="hero__title reveal delay-1">
+          We Build
+          <span class="gradient-text d-block">{{ displayText() }}<span class="hero__cursor" aria-hidden="true">|</span></span>
+          That Matter
+        </h1>
+
+        <p class="hero__subtitle reveal delay-2">
+          Ambika Infotech delivers cutting-edge Angular web applications and cross-platform
+          native mobile apps using Capacitor — turning your ideas into seamless digital experiences.
+        </p>
+
+        <div class="hero__actions reveal delay-3">
+          <a href="#services" class="btn btn-gradient btn-lg">
+            <i class="bi bi-rocket-takeoff" aria-hidden="true"></i> Explore Services
+          </a>
+          <a href="#portfolio" class="btn btn-outline-gradient btn-lg">
+            <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i> View Portfolio
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero__stats reveal delay-4" role="list">
+          <div class="hero__stat" role="listitem">
+            <span class="hero__stat-number gradient-text">50+</span>
+            <span class="hero__stat-label">Projects Delivered</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat" role="listitem">
+            <span class="hero__stat-number gradient-text">7+</span>
+            <span class="hero__stat-label">Years Experience</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat" role="listitem">
+            <span class="hero__stat-number gradient-text">30+</span>
+            <span class="hero__stat-label">Happy Clients</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right visual -->
+      <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
+        <div class="hero__visual reveal reveal-right delay-2">
+          <div class="hero__ring hero__ring--outer" aria-hidden="true"></div>
+          <div class="hero__ring hero__ring--inner" aria-hidden="true"></div>
+          <div class="hero__code-card" aria-hidden="true">
+            <div class="hero__code-header">
+              <span class="hero__code-dot hero__code-dot--red"></span>
+              <span class="hero__code-dot hero__code-dot--yellow"></span>
+              <span class="hero__code-dot hero__code-dot--green"></span>
+              <span class="ms-2" style="color: #8892a4; font-size:0.75rem;">app.component.ts</span>
+            </div>
+            <pre class="hero__code-body"><code><span class="c-kw">&#64;Component</span>(<span class="c-op">&#123;</span>
+  selector<span class="c-op">:</span> <span class="c-str">'app-root'</span><span class="c-op">,</span>
+  <span class="c-kw">standalone</span><span class="c-op">:</span> <span class="c-num">true</span><span class="c-op">,</span>
+  template<span class="c-op">:</span> <span class="c-str">`&lt;router-outlet /&gt;`</span>
+<span class="c-op">&#125;</span>)
+<span class="c-kw">export class</span> <span class="c-cls">AppComponent</span> <span class="c-op">&#123;</span>
+  title <span class="c-op">=</span> <span class="c-str">'Ambika Infotech'</span><span class="c-op">;</span>
+<span class="c-op">&#125;</span></code></pre>
+          </div>
+          <!-- Floating badges -->
+          <div class="hero__badge-float hero__badge-float--1" aria-hidden="true">
+            <i class="bi bi-lightning-charge-fill"></i> Angular 21
+          </div>
+          <div class="hero__badge-float hero__badge-float--2" aria-hidden="true">
+            <i class="bi bi-phone-fill"></i> Capacitor
+          </div>
+          <div class="hero__badge-float hero__badge-float--3" aria-hidden="true">
+            <i class="bi bi-shield-check-fill"></i> Secure
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <a href="#services" class="hero__scroll-hint" aria-label="Scroll to services">
+    <i class="bi bi-chevron-double-down" aria-hidden="true"></i>
+  </a>
+</section>

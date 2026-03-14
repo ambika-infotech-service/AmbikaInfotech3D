@@ -1,0 +1,47 @@
+<section id="portfolio" class="section port" aria-labelledby="portfolio-heading">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <div class="gradient-divider reveal"></div>
+      <h2 id="portfolio-heading" class="section__title gradient-text reveal delay-1">Our Work</h2>
+      <p class="section__subtitle reveal delay-2">
+        A selection of projects we're proud of — from startups to enterprise platforms.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      @for (project of projects; track project.title; let i = $index) {
+        <div class="col-md-6 col-xl-4">
+          <article
+            class="port__card glass-card reveal"
+            [class]="'delay-' + ((i % 3) + 1)"
+            [attr.aria-label]="project.title"
+          >
+            <div class="port__card-header" [style.background]="project.gradient" aria-hidden="true">
+              <i [class]="'bi ' + project.icon + ' port__card-hero-icon'"></i>
+              <span class="port__card-cat">{{ project.category }}</span>
+            </div>
+            <div class="port__card-body">
+              <h3 class="port__card-title">{{ project.title }}</h3>
+              <p class="port__card-desc">{{ project.description }}</p>
+              <div class="port__card-tags" role="list" aria-label="Technologies used">
+                @for (tag of project.tags; track tag) {
+                  <span class="port__tag" role="listitem">{{ tag }}</span>
+                }
+              </div>
+            </div>
+          </article>
+        </div>
+      }
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-5 reveal delay-3">
+      <p class="text-muted mb-3">Interested in working with us?</p>
+      <a href="#contact" class="btn btn-gradient btn-lg">
+        <i class="bi bi-send" aria-hidden="true"></i> Start Your Project
+      </a>
+    </div>
+
+  </div>
+</section>

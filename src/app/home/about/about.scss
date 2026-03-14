@@ -1,0 +1,126 @@
+:host { display: block; }
+
+.abt {
+  background: var(--color-dark);
+  overflow: hidden;
+
+  &__visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 420px;
+  }
+
+  &__avatar-wrap {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: #fff;
+    animation: pulse-ring 3s ease infinite;
+  }
+
+  &__avatar-ring {
+    position: absolute;
+    inset: -20px;
+    border-radius: 50%;
+    border: 2px dashed rgba(13,110,253,0.3);
+    animation: spin-slow 12s linear infinite;
+  }
+
+  &__float {
+    position: absolute;
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    min-width: 110px;
+
+    &--1 { top: 30px;  right: 20px; }
+    &--2 { bottom: 40px; left: 10px; }
+  }
+
+  &__float-num {
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  &__float-label {
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__lead {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(226,232,240,0.9);
+    margin-bottom: 1rem;
+
+    strong { color: #fff; font-weight: 600; }
+  }
+
+  &__para {
+    font-size: 0.95rem;
+    color: var(--color-muted);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  &__values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 0.5rem;
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__value {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+
+    &-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 0.5rem;
+      background: rgba(13,110,253,0.12);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--color-primary);
+    }
+
+    &-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 0.2rem;
+    }
+
+    &-text {
+      font-size: 0.85rem;
+      color: var(--color-muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+}
