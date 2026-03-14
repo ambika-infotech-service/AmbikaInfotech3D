@@ -1,3 +1,5 @@
+@use 'abstracts' as *;
+
 :host { display: block; }
 
 .svc {
@@ -6,14 +8,11 @@
   overflow: hidden;
 
   &__bg {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 80% 50%, rgba(13,110,253,0.06) 0%, transparent 60%);
-    pointer-events: none;
+    @include section-radial-bg(80%, 50%, $color-primary, 0.06);
   }
 
   &__card {
-    padding: 2rem;
+    padding: $card-padding;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -24,39 +23,31 @@
       background: var(--accent, var(--color-primary));
       box-shadow: 0 0 20px var(--accent, var(--color-primary));
 
-      i { color: #fff; }
+      i { color: $color-white; }
     }
   }
 
   &__card-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 0.75rem;
-    background: rgba(255,255,255,0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.35s ease;
-    flex-shrink: 0;
+    @include icon-box($icon-box-md, $radius-lg, $glass-white-05);
 
     i {
       font-size: 1.5rem;
       color: var(--accent, var(--color-primary));
-      transition: color 0.35s ease;
+      transition: color $transition-smooth;
     }
   }
 
   &__card-title {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #fff;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $color-white;
     margin: 0;
   }
 
   &__card-desc {
-    font-size: 0.9rem;
+    font-size: $font-size-base;
     color: var(--color-muted);
-    line-height: 1.7;
+    line-height: $line-height-loose;
     margin: 0;
     flex: 1;
   }
@@ -70,8 +61,8 @@
     gap: 0.4rem;
 
     li {
-      font-size: 0.85rem;
-      color: rgba(226,232,240,0.75);
+      font-size: $font-size-85;
+      color: $text-alpha-75;
       display: flex;
       align-items: center;
       gap: 0.5rem;

@@ -1,0 +1,23 @@
+// Browser reset + global base styles using SCSS tokens.
+@use '../abstracts' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $color-dark;
+  color: $color-light;
+  font-family: $font-family-base;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Custom scrollbar
+::-webkit-scrollbar         { width: 6px; }
+::-webkit-scrollbar-track   { background: $color-dark; }
+::-webkit-scrollbar-thumb   { background: $gradient-primary; border-radius: 3px; }

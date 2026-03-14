@@ -1,0 +1,6 @@
+// Shared glass card surface.
+@use '../abstracts' as *;
+
+.glass-card {
+  @include glass-surface;
+}

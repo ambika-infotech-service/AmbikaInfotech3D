@@ -1,3 +1,5 @@
+@use 'abstracts' as *;
+
 :host { display: block; }
 
 .abt {
@@ -6,9 +8,7 @@
 
   &__visual {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     height: 420px;
   }
 
@@ -20,21 +20,19 @@
   &__avatar {
     width: 180px;
     height: 180px;
-    border-radius: 50%;
+    border-radius: $radius-full;
     background: var(--gradient-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     font-size: 5rem;
-    color: #fff;
+    color: $color-white;
     animation: pulse-ring 3s ease infinite;
   }
 
   &__avatar-ring {
     position: absolute;
     inset: -20px;
-    border-radius: 50%;
-    border: 2px dashed rgba(13,110,253,0.3);
+    border-radius: $radius-full;
+    border: 2px dashed rgba($color-primary, 0.3);
     animation: spin-slow 12s linear infinite;
   }
 
@@ -53,7 +51,7 @@
 
   &__float-num {
     font-size: 1.6rem;
-    font-weight: 800;
+    font-weight: $font-weight-extrabold;
     line-height: 1;
   }
 
@@ -61,22 +59,22 @@
     font-size: 0.75rem;
     color: var(--color-muted);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: $letter-spacing-wide;
   }
 
   &__lead {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: rgba(226,232,240,0.9);
+    font-size: $font-size-xl;
+    line-height: $line-height-looser;
+    color: $text-alpha-90;
     margin-bottom: 1rem;
 
-    strong { color: #fff; font-weight: 600; }
+    strong { color: $color-white; font-weight: $font-weight-semibold; }
   }
 
   &__para {
-    font-size: 0.95rem;
+    font-size: $font-size-md;
     color: var(--color-muted);
-    line-height: 1.8;
+    line-height: $line-height-looser;
     margin-bottom: 2rem;
   }
 
@@ -97,30 +95,23 @@
     gap: 0.75rem;
 
     &-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 0.5rem;
-      background: rgba(13,110,253,0.12);
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include icon-box($icon-box-sm, $radius-md, $primary-ghost-bg);
       font-size: 1.1rem;
       color: var(--color-primary);
     }
 
     &-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #fff;
+      font-size: $font-size-md;
+      font-weight: $font-weight-bold;
+      color: $color-white;
       margin: 0 0 0.2rem;
     }
 
     &-text {
-      font-size: 0.85rem;
+      font-size: $font-size-85;
       color: var(--color-muted);
       margin: 0;
-      line-height: 1.5;
+      line-height: $line-height-snug;
     }
   }
 }

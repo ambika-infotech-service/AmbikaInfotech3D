@@ -1,3 +1,5 @@
+@use 'abstracts' as *;
+
 :host { display: block; }
 
 .port {
@@ -26,34 +28,34 @@
     align-items: flex-end;
     justify-content: space-between;
     padding: 1rem 1.25rem;
-    transition: filter 0.3s ease;
+    transition: filter $transition-smooth;
   }
 
   &__card-hero-icon {
     font-size: 3.5rem;
-    color: rgba(255,255,255,0.3);
+    color: $glass-white-20;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 0.3s ease;
+    transition: transform $transition-smooth;
   }
 
   &__card-cat {
     position: relative;
-    background: rgba(0,0,0,0.3);
-    border-radius: 50px;
+    background: $black-overlay;
+    border-radius: $radius-pill;
     padding: 0.2rem 0.75rem;
     font-size: 0.75rem;
-    font-weight: 600;
-    color: #fff;
+    font-weight: $font-weight-semibold;
+    color: $color-white;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: $letter-spacing-wide;
     margin-left: auto;
   }
 
   &__card-body {
-    padding: 1.5rem;
+    padding: $card-padding-sm;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -61,16 +63,16 @@
   }
 
   &__card-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #fff;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $color-white;
     margin: 0;
   }
 
   &__card-desc {
-    font-size: 0.875rem;
+    font-size: $font-size-875;
     color: var(--color-muted);
-    line-height: 1.7;
+    line-height: $line-height-loose;
     margin: 0;
     flex: 1;
   }
@@ -83,12 +85,7 @@
   }
 
   &__tag {
-    background: rgba(13,110,253,0.12);
-    border: 1px solid rgba(13,110,253,0.25);
-    color: rgba(226,232,240,0.8);
-    border-radius: 50px;
-    padding: 0.15rem 0.65rem;
+    @include tag-pill;
     font-size: 0.75rem;
-    font-weight: 500;
   }
 }

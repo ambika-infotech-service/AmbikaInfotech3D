@@ -1,0 +1,146 @@
+// =============================================================================
+// DESIGN TOKENS — single source of truth for all raw values.
+// These SCSS variables are mirrored as CSS custom properties in base/_tokens.scss
+// so they are accessible both at build-time (SCSS) and at run-time (var(--*)).
+// =============================================================================
+
+// ── Brand colours ─────────────────────────────────────────────────────────────
+$color-primary:   #0d6efd !default;
+$color-secondary: #6610f2 !default;
+$color-accent:    #00d4ff !default;
+
+// ── Surface colours ───────────────────────────────────────────────────────────
+$color-dark:   #0a0f1e !default;
+$color-dark-2: #111827 !default;
+$color-dark-3: #1a2235 !default;
+
+// ── Text colours ──────────────────────────────────────────────────────────────
+$color-light: #e2e8f0 !default;
+$color-muted: #8892a4 !default;
+$color-white: #ffffff !default;
+
+// ── Gradients ─────────────────────────────────────────────────────────────────
+$gradient-primary: linear-gradient(135deg, $color-primary 0%, $color-secondary 100%) !default;
+$gradient-accent:  linear-gradient(135deg, $color-accent 0%, $color-primary 60%, $color-secondary 100%) !default;
+
+// ── Glass / alpha layers ──────────────────────────────────────────────────────
+// White glass surfaces
+$glass-bg:           rgba(255, 255, 255, 0.04) !default;
+$glass-bg-hover:     rgba(255, 255, 255, 0.08) !default;
+$glass-border:       rgba(255, 255, 255, 0.08) !default;
+$glass-border-faint: rgba(255, 255, 255, 0.06) !default;
+$glass-divider:      rgba(255, 255, 255, 0.07) !default;
+$glass-white-05:     rgba(255, 255, 255, 0.05) !default;
+$glass-white-12:     rgba(255, 255, 255, 0.12) !default;
+$glass-white-20:     rgba(255, 255, 255, 0.2)  !default;
+
+// Primary colour ghosts
+$primary-ghost-bg:       rgba($color-primary, 0.12) !default;
+$primary-ghost-bg-md:    rgba($color-primary, 0.15) !default;
+$primary-ghost-border:   rgba($color-primary, 0.25) !default;
+$primary-ghost-border-md: rgba($color-primary, 0.35) !default;
+$primary-ghost-border-hover: rgba($color-primary, 0.4) !default;
+$primary-glow:           rgba($color-primary, 0.45) !default;
+$primary-focus-ring:     rgba($color-primary, 0.2)  !default;
+
+// Secondary ghosts
+$secondary-ghost-bg:   rgba($color-secondary, 0.07) !default;
+$secondary-glow:       rgba($color-secondary, 0.35) !default;
+
+// Dark overlays
+$black-overlay:    rgba(0, 0, 0, 0.3) !default;
+$black-shadow:     rgba(0, 0, 0, 0.4) !default;
+$black-shadow-deep: rgba(0, 0, 0, 0.5) !default;
+
+// Text alpha variants (based on $color-light)
+$text-alpha-90: rgba($color-light, 0.9)  !default;
+$text-alpha-85: rgba($color-light, 0.85) !default;
+$text-alpha-80: rgba($color-light, 0.8)  !default;
+$text-alpha-75: rgba($color-light, 0.75) !default;
+
+// Navbar overlays
+$navbar-scrolled-bg: rgba(10, 15, 30, 0.95) !default;
+$navbar-mobile-bg:   rgba(10, 15, 30, 0.98) !default;
+
+// Code card surface
+$card-dark-bg: rgba(17, 24, 39, 0.9) !default;
+$card-dark-bg-light: rgba(17, 24, 39, 0.04) !default;
+$card-dark-border: rgba(255, 255, 255, 0.1) !default;
+
+// ── Typography ────────────────────────────────────────────────────────────────
+$font-family-base: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif !default;
+$font-family-mono: 'Fira Code', 'Cascadia Code', monospace !default;
+
+// Fluid scale
+$font-size-xs:   0.72rem  !default;
+$font-size-sm:   0.8rem   !default;
+$font-size-85:   0.85rem  !default;
+$font-size-875:  0.875rem !default;
+$font-size-base: 0.9rem   !default;
+$font-size-md:   0.95rem  !default;
+$font-size-lg:   1rem     !default;
+$font-size-xl:   1.1rem   !default;
+$font-size-2xl:  1.15rem  !default;
+$font-size-3xl:  1.2rem   !default;
+$font-size-4xl:  1.3rem   !default;
+
+$font-weight-medium:     500 !default;
+$font-weight-semibold:   600 !default;
+$font-weight-bold:       700 !default;
+$font-weight-extrabold:  800 !default;
+
+$line-height-tight:   1.1  !default;
+$line-height-snug:    1.4  !default;
+$line-height-base:    1.5  !default;
+$line-height-relaxed: 1.6  !default;
+$line-height-loose:   1.7  !default;
+$line-height-looser:  1.8  !default;
+
+$letter-spacing-wide:    0.05em !default;
+$letter-spacing-wider:   0.06em !default;
+$letter-spacing-widest:  0.08em !default;
+
+// ── Spacing ───────────────────────────────────────────────────────────────────
+$section-padding-y: 5rem  !default;
+$card-padding:      2rem  !default;
+$card-padding-sm:   1.5rem !default;
+$card-padding-xs:   1rem  !default;
+
+// ── Border radius ─────────────────────────────────────────────────────────────
+$radius-sm:   0.4rem  !default;
+$radius-md:   0.5rem  !default;
+$radius-lg:   0.75rem !default;
+$radius-xl:   1rem    !default;
+$radius-pill: 50px    !default;
+$radius-full: 50%     !default;
+
+// ── Component sizing ──────────────────────────────────────────────────────────
+$icon-box-sm:    40px !default;
+$icon-box-md:    52px !default;
+$social-btn-sm:  36px !default;
+$social-btn-md:  38px !default;
+$logo-icon-size: 36px !default;
+
+// ── Transitions ───────────────────────────────────────────────────────────────
+$transition-fast:   all 0.2s ease                           !default;
+$transition-base:   all 0.25s ease                          !default;
+$transition-smooth: all 0.3s ease                           !default;
+$transition-slow:   all 0.4s cubic-bezier(0.4, 0, 0.2, 1)  !default;
+
+// ── Z-index ───────────────────────────────────────────────────────────────────
+$z-navbar: 1000 !default;
+
+// ── Section typography cap ────────────────────────────────────────────────────
+$section-subtitle-max-width: 560px !default;
+
+// ── Code syntax colours ───────────────────────────────────────────────────────
+$code-keyword:  #c792ea !default;
+$code-operator: #89ddff !default;
+$code-string:   #c3e88d !default;
+$code-number:   #f78c6c !default;
+$code-class:    #ffcb6b !default;
+
+// ── Hero floating badge accent colours ───────────────────────────────────────
+$badge-float-1: #61dafb !default;
+$badge-float-2: #a78bfa !default;
+$badge-float-3: #34d399 !default;

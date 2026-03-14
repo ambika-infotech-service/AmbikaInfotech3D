@@ -1,0 +1,4 @@
+// Abstracts — no output CSS, only SCSS constructs.
+// Components import this with: @use 'abstracts' as *;
+@forward 'variables';
+@forward 'mixins';

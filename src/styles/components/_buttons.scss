@@ -1,0 +1,50 @@
+// Global button overrides.
+@use '../abstracts' as *;
+
+.btn-gradient {
+  background: $gradient-primary;
+  border: none;
+  color: $color-white;
+  padding: 0.7rem 2rem;
+  border-radius: $radius-pill;
+  font-weight: $font-weight-semibold;
+  transition: $transition-slow;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: $glass-white-20;
+    opacity: 0;
+    transition: $transition-smooth;
+  }
+
+  &:hover::after { opacity: 1; }
+
+  &:hover {
+    color: $color-white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px $primary-glow;
+  }
+}
+
+.btn-outline-gradient {
+  background: transparent;
+  border: 2px solid transparent;
+  background-image: linear-gradient($color-dark, $color-dark), $gradient-primary;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  color: $color-light;
+  padding: 0.65rem 2rem;
+  border-radius: $radius-pill;
+  font-weight: $font-weight-semibold;
+  transition: $transition-slow;
+
+  &:hover {
+    color: $color-white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px $secondary-glow;
+  }
+}

@@ -1,0 +1,148 @@
+// =============================================================================
+// MIXINS — reusable structural patterns
+// All mixins use $variables via @use to keep everything consistent.
+// =============================================================================
+@use 'variables' as v;
+
+// ── Layout helpers ────────────────────────────────────────────────────────────
+
+/// Absolute flex centering shorthand
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/// Flex column shorthand
+@mixin flex-column($gap: 0) {
+  display: flex;
+  flex-direction: column;
+  @if $gap != 0 { gap: $gap; }
+}
+
+/// Flex row with custom alignment
+@mixin flex-row($align: center, $gap: 0) {
+  display: flex;
+  align-items: $align;
+  @if $gap != 0 { gap: $gap; }
+}
+
+// ── Component patterns ────────────────────────────────────────────────────────
+
+/// Square icon container (services, about, contact, tech)
+@mixin icon-box($size: v.$icon-box-md, $radius: v.$radius-lg, $bg: v.$primary-ghost-bg) {
+  width: $size;
+  height: $size;
+  border-radius: $radius;
+  background: $bg;
+  flex-shrink: 0;
+  @include flex-center;
+  transition: v.$transition-smooth;
+}
+
+/// Circular / pill social icon button (footer, contact)
+@mixin social-btn($size: v.$social-btn-sm, $radius: v.$radius-sm) {
+  width: $size;
+  height: $size;
+  border-radius: $radius;
+  background: v.$glass-white-05;
+  border: 1px solid v.$glass-border;
+  @include flex-center;
+  color: v.$color-muted;
+  text-decoration: none;
+  transition: v.$transition-base;
+
+  &:hover {
+    background: v.$gradient-primary;
+    border-color: transparent;
+    color: v.$color-white;
+  }
+}
+
+/// The layered hexagon + code-slash logo mark (navbar, footer)
+@mixin logo-icon-shell {
+  position: relative;
+  width: v.$logo-icon-size;
+  height: v.$logo-icon-size;
+  @include flex-center;
+
+  .bi-hexagon-fill {
+    position: absolute;
+    font-size: 2.2rem;
+    background: v.$gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bi-code-slash {
+    position: relative;
+    font-size: 0.9rem;
+    color: v.$color-white;
+    z-index: 1;
+  }
+}
+
+// ── Text helpers ──────────────────────────────────────────────────────────────
+
+/// CSS gradient text clip trick
+@mixin gradient-text($gradient: v.$gradient-accent) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/// Uppercase tracking label (category pill, section col titles)
+@mixin label-caps($size: v.$font-size-xs, $tracking: v.$letter-spacing-wide) {
+  font-size: $size;
+  text-transform: uppercase;
+  letter-spacing: $tracking;
+  color: v.$color-muted;
+}
+
+// ── Surface helpers ───────────────────────────────────────────────────────────
+
+/// Glass card base styles — shared across .glass-card and custom cards
+@mixin glass-surface($radius: v.$radius-xl) {
+  background: v.$glass-bg;
+  border: 1px solid v.$glass-border;
+  border-radius: $radius;
+  backdrop-filter: blur(10px);
+  transition: v.$transition-slow;
+
+  &:hover {
+    background: v.$glass-bg-hover;
+    border-color: v.$primary-ghost-border-hover;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px v.$black-overlay;
+  }
+}
+
+/// Radial background overlay used in section decorations
+@mixin section-radial-bg($x: 80%, $y: 50%, $color: v.$color-primary, $opacity: 0.06) {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at #{$x} #{$y}, rgba($color, $opacity) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+// ── Responsive helpers ────────────────────────────────────────────────────────
+
+/// Auto-fill responsive grid
+@mixin auto-grid($min-col: 130px, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($min-col, 1fr));
+  gap: $gap;
+}
+
+/// Tag / pill badge (portfolio tags, tech filter pills)
+@mixin tag-pill {
+  background: v.$primary-ghost-bg;
+  border: 1px solid v.$primary-ghost-border;
+  border-radius: v.$radius-pill;
+  color: v.$text-alpha-80;
+  padding: 0.15rem 0.65rem;
+  font-size: v.$font-size-xs;
+  font-weight: v.$font-weight-medium;
+}
