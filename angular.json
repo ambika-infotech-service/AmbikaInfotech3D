@@ -29,10 +29,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss",
-              "node_modules/bootstrap-icons/font/bootstrap-icons.css"
-            ],
+            "styles": ["src/styles.scss", "node_modules/bootstrap-icons/font/bootstrap-icons.css"],
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
             }
@@ -75,6 +72,9 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
