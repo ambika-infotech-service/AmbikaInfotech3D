@@ -1,0 +1,121 @@
+# Ambika Infotech — Full Content
+
+> Boutique software studio in Ahmedabad, India, specialising in Angular web development and cross-platform native mobile apps using Capacitor. Founded 2018. 50+ projects · 30+ clients · 7+ years experience.
+
+---
+
+## About
+
+Ambika Infotech is a boutique software development studio founded in 2018 and headquartered in Ahmedabad, Gujarat, India. We are a small, senior team of developers and designers who build high-quality Angular web applications and cross-platform native mobile apps using Capacitor.
+
+We work with startups, SMEs, and enterprises across India and globally, helping them design, build, and ship digital products that are fast, accessible, and maintainable.
+
+**Key facts:**
+- Founded: 2018
+- Location: Ahmedabad, Gujarat, India
+- Team languages: English, Hindi, Gujarati
+- Projects delivered: 50+
+- Happy clients: 30+
+- Years of experience: 7+
+
+---
+
+## Services
+
+### Angular Web Development
+We build custom, production-grade Angular applications. Our work uses the latest Angular features: standalone components, signals for reactive state management, lazy-loaded routes, Server-Side Rendering (SSR) where needed, and strict TypeScript throughout. Every application we deliver is performant, accessible (WCAG AA), and built for long-term maintainability.
+
+### Capacitor Mobile App Development
+We build cross-platform iOS and Android applications using Capacitor on top of Angular. This means a single TypeScript/Angular codebase compiles into native apps distributed on both the Apple App Store and Google Play — while retaining full access to native device APIs (camera, GPS, push notifications, biometrics, etc.). No compromise on native feel.
+
+### Progressive Web Apps (PWA)
+We develop Progressive Web Apps that can be installed on any device, work fully offline via service workers, and deliver app-like experiences from a web URL. PWAs remove the friction of app store distribution while giving users a fast, reliable, and engaging experience.
+
+### UI/UX Design & Prototyping
+We design clean, accessible, and modern user interfaces. Our design process starts with wireframes and interactive prototypes, then moves to component-based implementation using Bootstrap 5 and a custom SCSS design-token system. Colour contrast, keyboard navigation, and ARIA semantics are non-negotiable standards in every project.
+
+---
+
+## Technologies
+
+### Languages & Frameworks
+- **Angular** (latest) — primary frontend framework; standalone components, signals, OnPush change detection
+- **TypeScript** (strict mode) — all projects use full strict type checking
+- **Capacitor** — cross-platform native runtime for Angular-based mobile apps
+- **Node.js** — backend services and build tooling
+- **RxJS** — reactive programming for asynchronous data streams
+
+### Styling
+- **Bootstrap 5** — utility-first CSS framework for responsive layouts
+- **SCSS** — custom design-token system with variables and mixins
+- **Bootstrap Icons** — icon set used throughout projects
+
+### State & Data
+- **Angular Signals** — fine-grained reactivity for component state
+- **NgRx** — large-scale application state management when needed
+- **Firebase (Firestore, Auth, Storage)** — rapid backend for web and mobile
+- **REST APIs & GraphQL** — integration with third-party and custom APIs
+
+### Tooling & Quality
+- **Angular CLI** — project scaffolding, builds, and migrations
+- **ESLint + Prettier** — code quality and consistent formatting
+- **Karma / Jest** — unit testing
+- **Playwright / Cypress** — end-to-end testing
+
+---
+
+## Portfolio Highlights
+
+Ambika Infotech has delivered projects across multiple industries including:
+- **SaaS dashboards** — data-heavy Angular applications with real-time updates
+- **E-commerce frontends** — fast, SEO-friendly storefronts with Angular Universal SSR
+- **Healthcare apps** — HIPAA-conscious mobile apps with Capacitor and secure APIs
+- **Logistics platforms** — GPS-integrated Capacitor apps with offline-first architecture
+- **Corporate websites** — accessible, performance-optimised Angular static sites
+
+---
+
+## Frequently Asked Questions
+
+**Q: What services does Ambika Infotech offer?**
+A: Angular web application development, Capacitor cross-platform mobile app development (iOS & Android), Progressive Web App (PWA) development, and UI/UX design and prototyping.
+
+**Q: What technologies does Ambika Infotech specialise in?**
+A: Angular (latest version), TypeScript, Capacitor, Node.js, Bootstrap 5, SCSS, RxJS, NgRx, Firebase, and REST/GraphQL API integration.
+
+**Q: Where is Ambika Infotech located?**
+A: Ahmedabad, Gujarat, India. We work with clients globally and collaborate remotely across time zones.
+
+**Q: How many projects has Ambika Infotech delivered?**
+A: More than 50 projects for over 30 happy clients across 7+ years since founding in 2018.
+
+**Q: Can Ambika Infotech build mobile apps for both iOS and Android?**
+A: Yes. We use Capacitor on top of Angular to produce a single codebase that deploys to both iOS (App Store) and Android (Google Play) with full native device API access.
+
+**Q: Does Ambika Infotech work with international clients?**
+A: Yes. While based in Ahmedabad, India, we work with clients across the globe and are experienced in remote collaboration.
+
+**Q: What is the typical project engagement model?**
+A: We offer fixed-scope project delivery, ongoing retainer/maintenance, and team augmentation depending on client needs.
+
+**Q: How can I contact Ambika Infotech?**
+A: Email hello@ambikainfotech.online, use the contact form at https://www.3d.ambikainfotech.online/#contact, connect on LinkedIn at linkedin.com/company/ambika-infotech, or find us on GitHub at github.com/ambikainfotech.
+
+---
+
+## Social & Web Presence
+
+- Website: https://www.3d.ambikainfotech.online
+- GitHub: https://github.com/ambikainfotech
+- LinkedIn: https://linkedin.com/company/ambika-infotech
+- Twitter / X: https://x.com/ambikainfotech
+- Instagram: https://instagram.com/ambikainfotech
+- Email: hello@ambikainfotech.online
+
+---
+
+## Machine-Readable Data
+
+- llms.txt (summary): https://www.3d.ambikainfotech.online/llms.txt
+- Sitemap: https://www.3d.ambikainfotech.online/sitemap.xml
+- Robots: https://www.3d.ambikainfotech.online/robots.txt

@@ -1,0 +1,42 @@
+User-agent: *
+Allow: /
+
+# AI crawlers — explicitly allowed for GEO (Generative Engine Optimisation)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+# LLM-readable content files
+# https://www.3d.ambikainfotech.online/llms.txt
+# https://www.3d.ambikainfotech.online/llms-full.txt
+
+Sitemap: https://www.3d.ambikainfotech.online/sitemap.xml
