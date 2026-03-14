@@ -23,8 +23,8 @@ const CONTACT_INFO: ContactInfo[] = [
   {
     icon: 'bi-envelope-fill',
     label: 'Email',
-    value: 'hello@ambikainfotech.in',
-    href: 'mailto:hello@ambikainfotech.in',
+    value: 'hello@ambikainfotech.online',
+    href: 'mailto:hello@ambikainfotech.online',
   },
   {
     icon: 'bi-telephone-fill',
