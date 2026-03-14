@@ -1,5 +1,6 @@
 @use 'abstracts' as *;
 
+// ── Host shell ────────────────────────────────────────────────────────────────
 :host {
   display: block;
   position: fixed;
@@ -17,16 +18,35 @@
   box-shadow: 0 4px 24px $black-shadow;
 }
 
+// Dim page content when mobile menu is open — a fixed pseudo-overlay
+:host.menu-open::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+  pointer-events: none;
+  animation: fadeIn 0.25s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+// ── Navbar bar ────────────────────────────────────────────────────────────────
 .ai-navbar {
-  padding: 1.1rem 0;
+  padding: 0.9rem 0;
   transition: $transition-slow;
 
   &__inner {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
   }
 
+  // ── Brand ──────────────────────────────────────────────────────────────────
   &__brand {
     display: flex;
     align-items: center;
@@ -42,8 +62,8 @@
     @include logo-icon-shell;
   }
 
+  // ── Desktop links ──────────────────────────────────────────────────────────
   &__links {
-    display: flex;
     list-style: none;
     margin: 0 auto;
     padding: 0;
@@ -83,52 +103,126 @@
     }
   }
 
+  // ── Hamburger ──────────────────────────────────────────────────────────────
   &__hamburger {
-    background: none;
-    border: 1px solid $glass-white-20;
+    width: 40px;
+    height: 40px;
+    background: $glass-white-05;
+    border: 1px solid $glass-border;
     border-radius: $radius-sm;
     color: $color-white;
-    font-size: 1.4rem;
-    padding: 0.3rem 0.6rem;
+    @include flex-center;
     cursor: pointer;
     margin-left: auto;
-    line-height: 1;
+    flex-shrink: 0;
     transition: $transition-fast;
 
-    &:hover {
-      border-color: var(--color-primary);
-      color: var(--color-primary);
-    }
-  }
-
-  &__mobile {
-    display: none;
-    background: $navbar-mobile-bg;
-    border-top: 1px solid $glass-divider;
-    padding: 1rem 1.5rem 1.5rem;
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    i {
+      font-size: 1.25rem;
+      transition: transform 0.3s ease;
+      display: block;
     }
 
     &--open {
-      display: block;
-      animation: fadeInUp 0.3s ease;
+      background: $primary-ghost-bg;
+      border-color: $primary-ghost-border;
+
+      i { transform: rotate(90deg); }
+    }
+
+    &:hover {
+      background: $primary-ghost-bg;
+      border-color: $primary-ghost-border;
+      color: var(--color-primary);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
     }
   }
 
-  &__mobile-link {
-    display: block;
-    padding: 0.75rem 0;
-    color: $text-alpha-85;
-    font-size: $font-size-lg;
-    font-weight: $font-weight-medium;
-    border-bottom: 1px solid $glass-white-05;
-    text-decoration: none;
-    transition: color 0.2s;
+  // ── Mobile panel ──────────────────────────────────────────────────────────
+  &__mobile {
+    overflow: hidden;
+    max-height: 0;
+    // Slide down
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    background: $navbar-mobile-bg;
+    border-top: 1px solid transparent;
 
-    &:hover { color: $color-white; }
+    &--open {
+      max-height: 600px;
+      border-top-color: $glass-divider;
+    }
+  }
+
+  &__mobile-list {
+    list-style: none;
+    padding: 0.5rem 0 0;
+    margin: 0;
+  }
+
+  &__mobile-link {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.75rem 0.5rem;
+    color: $text-alpha-85;
+    text-decoration: none;
+    border-radius: $radius-md;
+    transition: $transition-base;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-white;
+      background: $primary-ghost-bg;
+      padding-left: 0.75rem;
+
+      .ai-navbar__mobile-link-icon {
+        background: $primary-ghost-bg-md;
+        color: var(--color-primary);
+      }
+
+      .ai-navbar__mobile-link-chevron {
+        transform: translateX(3px);
+        color: var(--color-primary);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+  }
+
+  &__mobile-link-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: $radius-sm;
+    background: $glass-white-05;
+    @include flex-center;
+    font-size: 0.95rem;
+    color: $text-alpha-80;
+    flex-shrink: 0;
+    transition: $transition-smooth;
+  }
+
+  &__mobile-link-label {
+    flex: 1;
+    font-size: $font-size-md;
+    font-weight: $font-weight-medium;
+  }
+
+  &__mobile-link-chevron {
+    font-size: 0.65rem;
+    color: $color-muted;
+    transition: transform $transition-base, color $transition-base;
+  }
+
+  &__mobile-cta {
+    padding: 0.75rem 0.5rem 1.5rem;
+    border-top: 1px solid $glass-divider;
+    margin-top: 0.5rem;
   }
 }
