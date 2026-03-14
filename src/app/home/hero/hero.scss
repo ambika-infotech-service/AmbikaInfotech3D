@@ -43,6 +43,14 @@
     z-index: 1;
   }
 
+  &__row {
+    padding: 7rem 0 5rem;
+
+    @media (min-width: 992px) {
+      padding: 8rem 0 6rem;
+    }
+  }
+
   &__badge {
     display: inline-flex;
     align-items: center;
